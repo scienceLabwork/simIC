@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Computer Instructions Simulator</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Links-icons.css">
+    <script src="assets/js/index.js"></script>
+    <script src="/node_modules/codemirror/dist/index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 480 480" width="480px" height="480px">
+                <g id="surface32081228">
+                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(255, 255, 255);fill-opacity:1;" d="M 80 64 C 71.164062 64 64 71.164062 64 80 L 64 336 C 64 344.835938 71.164062 352 80 352 L 191.96875 352 L 191.96875 384 L 125.28125 384 C 121.21875 384 117.304688 385.558594 114.34375 388.34375 L 82.53125 418.1875 C 77.234375 423.132812 80.785156 432 88.03125 432 L 391.96875 432 C 399.214844 432 402.765625 423.117188 397.46875 418.15625 L 365.65625 388.3125 C 362.679688 385.542969 358.78125 384 354.71875 384 L 287.96875 384 L 287.96875 352 L 400 352 C 408.835938 352 416 344.835938 416 336 L 416 80 C 416 71.164062 408.835938 64 400 64 Z M 96 96 L 384 96 L 384 320 L 96 320 Z M 191.6875 143.84375 C 187.53125 143.96875 183.585938 145.703125 180.6875 148.6875 L 132.6875 196.6875 C 126.441406 202.9375 126.441406 213.0625 132.6875 219.3125 L 180.6875 267.3125 C 184.699219 271.492188 190.660156 273.175781 196.265625 271.714844 C 201.875 270.253906 206.253906 265.875 207.714844 260.265625 C 209.175781 254.660156 207.492188 248.699219 203.3125 244.6875 L 166.625 208 L 203.3125 171.3125 C 208.042969 166.710938 209.46875 159.679688 206.894531 153.601562 C 204.324219 147.523438 198.285156 143.648438 191.6875 143.84375 Z M 287.84375 143.84375 C 281.332031 143.84375 275.472656 147.792969 273.023438 153.824219 C 270.574219 159.855469 272.023438 166.769531 276.6875 171.3125 L 313.375 208 L 276.6875 244.6875 C 272.507812 248.699219 270.824219 254.660156 272.285156 260.265625 C 273.746094 265.875 278.125 270.253906 283.734375 271.714844 C 289.339844 273.175781 295.300781 271.492188 299.3125 267.3125 L 347.3125 219.3125 C 353.558594 213.0625 353.558594 202.9375 347.3125 196.6875 L 299.3125 148.6875 C 296.300781 145.589844 292.164062 143.84375 287.84375 143.84375 Z M 287.84375 143.84375 "/>
+                </g>
+                </svg>
+                </span>
+                <span>Computer Instructions Simulator</span></a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+    </nav>
+    <div class="split">
+        <div class="left">
+            <form action="{{url_for('run')}}" method="POST">
+                <div class="editor">
+                    <span class="label">Code Editor</span>
+                    <textarea class="code" name="codes">{{default_code}}</textarea>
+                    <button class="btn btn-primary" type="submit">Run</button>
+                    <textarea class="code2" name="codes" style="color:{{compileColor}};" readonly>{{compilations}}</textarea>
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <div class="right-container">
+                <form action="{{url_for('memory')}}" method="POST">
+                    <div class="editor2">
+                        <span class="label">Edit Memory</span>
+                        <input class="code3" name="memoryLoc" placeholder="202, 120" wrap="off">
+                        <button class="btn btn-primary" type="submit">Edit</button>
+                    <table class="memoryTable" >
+                        <tr>
+                            <th>Address</th>
+                            <th>Value</th>
+                        </tr>
+                        {% for i in range(0,5) %}
+                        <tr>
+                            <td>{{memoryDict[i][0]}}</td>
+                            <td>{{memoryDict[i][1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </form>
+                <span class="label2">Accumulator</span>
+                <textarea class="code3" name="Accumulator" wrap="off" readonly>{{accumulator}}</textarea>
+                <span class="label2">Instructions Steps</span>
+                <textarea class="code4" name="Accumulator" wrap="off" readonly>{{outputSteps}}</textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

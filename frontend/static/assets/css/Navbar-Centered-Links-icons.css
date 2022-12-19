@@ -1,0 +1,143 @@
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+
+
+
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  height: 90vh;
+  display: block;
+  width: 60%;
+  overflow-y: scroll;
+}
+
+.right {
+  height: 90vh;
+  display: block;
+  width: 40%;
+  overflow-y: scroll;
+}
+
+.editor {
+  margin-left: 80px;
+  position: left;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  row-gap: 10px;
+}
+
+.code{
+  height: 50vh;
+  resize: none;
+}
+
+.code2{
+  height: 17vh;
+  resize: none;
+  padding: 0.5rem;
+  font-size: 1rem; 
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+}
+
+.code3{
+  height: 4vh;
+  resize: none;
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 1rem; 
+  font-weight: 400;
+}
+
+.right-container{
+  padding: 1rem;;
+}
+
+.memoryTable{
+  margin-top: 2rem;
+}
+
+table,tr,th,td{ 
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.label2{
+  margin-top: 1rem;
+}
+
+.code4{
+  height: 19vh;
+  resize: none;
+  padding: 0.2rem;
+  font-size: 1rem; 
+  font-weight: 400;
+}
+
+.editor2 {
+  margin-left: 56px;
+  position: left;
+  display: flex;
+  flex-direction: column;
+  width: 73%;
+  row-gap: 10px;
+}
