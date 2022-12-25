@@ -141,3 +141,22 @@ table,tr,th,td{
   width: 73%;
   row-gap: 10px;
 }
+
+.footer-main {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 4vh;
+  width: 100%;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+}
+
+.footer-text{
+  color: #0d6efd;
+}
+
+a{
+  text-decoration: none;
+}
