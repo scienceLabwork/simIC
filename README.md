@@ -1,5 +1,7 @@
 # Computer Instructions Simulator
-This is a simple Computer Instructions Simulator. To make it simpler, The Address part of the instructions are in decimal.<br><br>
+This is a simple Computer Instructions Simulator. To make it simpler, The Address part of the instructions are in decimal.<br>
+Try it out [http://isim.rudrashah.in](http://isim.rudrashah.in/)<br>
+<br><br>
 ![computer Instructions Simulator](sampleICSIM.png)
 ## Memory Related Instructions.<br>
 `0200 -> AND OPERATIONS TO ACCUMULATOR FROM MEMORY WORD`<br>
