@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/70e8caba-505a-4c22-9991-0fbe0dad46bf/AppServices/subscriptions/70e8caba-505a-4c22-9991-0fbe0dad46bf/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/isim",
-    "appService.deploySubpath": "."
-}
